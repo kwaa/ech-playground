@@ -10,7 +10,7 @@ RUN set -ex; \
     git clone git@github.com:sftcd/openssl.git -b ECH-draft-13a --single-branch; \
     cd openssl; \
     ./config; \
-    make; \
+    make -j $(nproc); \
     # Download & Build HAProxy (sftcd:ECH-experimental)
     cd /app; \
     git clone git@github.com:sftcd/haproxy.git -b ECH-experimental --single-branch; \
