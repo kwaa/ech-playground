@@ -4,7 +4,7 @@ Try using ECH (Encrypted Client Hello) for TLS-based proxies.
 
 ## HAProxy + NaiveProxy
 
-I compiled OpenSSL and HAProxy as per [esnistuff/haproxy.md](https://github.com/sftcd/openssl/blob/ECH-draft-13a/esnistuff/haproxy.md) and can get the [Dockerfile](/haproxy/Dockerfile) and [x86_64 binaries](/haproxy/haproxy) from the `haproxy` folder of this repo.
+I compiled OpenSSL and HAProxy as instructed in [esnistuff/haproxy.md](https://github.com/sftcd/openssl/blob/ECH-draft-13a/esnistuff/haproxy.md), and you can get the [x86_64 binaries](/haproxy/haproxy) and [Dockerfile](/haproxy/Dockerfile) from the `haproxy` folder of this repo.
 
 Once I confirm that it works, I'll make the image available through GitHub Actions.
 
@@ -24,3 +24,7 @@ Use the [same configuration](/naive/config.json) as [HAProxy Setup](https://gith
   "padding": true
 }
 ```
+
+### Docker Compose
+
+TODO
