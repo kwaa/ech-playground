@@ -28,3 +28,11 @@ Use the [same configuration](/naive/config.json) as [HAProxy Setup](https://gith
 ### Docker Compose
 
 TODO
+
+## Useful links
+
+- [Developing ECH for OpenSSL (DEfO)](https://defo.ie/)
+- [Experiences with implementing and deploying ECH](https://defo.ie/report.html)
+- [sftcd/openssl-[ECH-draft-13a]](https://github.com/sftcd/openssl/tree/ECH-draft-13a)
+- [sftcd/haproxy-[ECH-experimental]](https://github.com/sftcd/haproxy/tree/ECH-experimental)
+- [esnistuff](https://github.com/sftcd/openssl/tree/ECH-draft-13a/esnistuff)
