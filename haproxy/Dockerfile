@@ -6,8 +6,9 @@ RUN set -ex; \
     apk add --no-cache --virtual deps \
     build-base \
     ca-certificates \
-    perl \
-    git; \
+    git \
+    linux-headers \
+    perl; \
     # Download & Build OpenSSL (sftcd:ECH-draft-13a)
     git clone https://github.com/sftcd/openssl.git -b ECH-draft-13a --single-branch --depth=1; \
     cd openssl; \
@@ -32,4 +33,6 @@ RUN apk add --no-cache ca-certificates
 
 COPY --from=builder /app/haproxy/haproxy haproxy
 
-CMD ["haproxy", "-f", "/etc/haproxy/haproxy.cfg"]
+ENTRYPOINT ["haproxy"]
+
+CMD ["-f", "/etc/haproxy/haproxy.cfg"]
