@@ -31,6 +31,8 @@ TODO
 
 ## Useful links
 
+- [ECH (Encrypted client hello) support · Issue #1924 · haproxy/haproxy](https://github.com/haproxy/haproxy/issues/1924)
+- [Will Encrypted client hello be supported at both the client and server side? · Issue #314 · klzgrad/naiveproxy](https://github.com/klzgrad/naiveproxy/issues/314)
 - [Developing ECH for OpenSSL (DEfO)](https://defo.ie/)
 - [Experiences with implementing and deploying ECH](https://defo.ie/report.html)
 - [sftcd/openssl-[ECH-draft-13a]](https://github.com/sftcd/openssl/tree/ECH-draft-13a)
