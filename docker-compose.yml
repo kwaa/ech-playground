@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  haproxy:
+    image: haproxy # kwaabot/haproxy unreleased yet, requires build
+    ports:
+      - 80:80
+      - 443:443
+      - 443:443/udp
+    volumes:
+      - ./haproxy/haproxy.cfg:/etc/haproxy/haproxy.cfg
+  naive:
+    image: kwaabot/naive
+    volumes:
+      - ./naive/config.json:/etc/naive/config.json
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+      - /var/lib/letsencrypt:/var/lib/letsencrypt
+    command: certonly --cert-name example.com -d example.com --http-01-address 127.0.0.1 --http-01-port 8081 --preferred-challenges http-01 --agree-tos
