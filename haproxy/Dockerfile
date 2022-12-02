@@ -6,6 +6,7 @@ RUN set -ex; \
     apk add --no-cache --virtual deps \
     build-base \
     ca-certificates \
+    perl \
     git; \
     # Download & Build OpenSSL (sftcd:ECH-draft-13a)
     git clone https://github.com/sftcd/openssl.git -b ECH-draft-13a --single-branch --depth=1; \
