@@ -6,7 +6,7 @@ services:
     ports:
       - 80:80
       - 443:443
-      - 443:443/udp
+      # - 443:443/udp # 2.5-dev0 doesn't support HTTP/3
     volumes:
       - ./haproxy/haproxy.cfg:/etc/haproxy/haproxy.cfg
   naive:
