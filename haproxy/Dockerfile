@@ -8,7 +8,11 @@ RUN set -ex; \
     ca-certificates \
     git \
     linux-headers \
-    perl; \
+    perl \
+    # https://github.com/docker-library/haproxy/blob/master/2.5/alpine/Dockerfile
+    lua5.4-dev \
+    pcre2-dev \
+    readline-dev; \
     # Download & Build OpenSSL (sftcd:ECH-draft-13a)
     git clone https://github.com/sftcd/openssl.git -b ECH-draft-13a --single-branch --depth=1; \
     cd openssl; \
@@ -20,6 +24,13 @@ RUN set -ex; \
     cd haproxy; \
     make -j $(nproc) \
     TARGET=linux-musl \
+    USE_GETADDRINFO=1 \
+    USE_LUA=1 \
+    LUA_INC=/usr/include/lua5.4 \
+    LUA_LIB=/usr/lib/lua5.4 \
+    USE_PCRE2=1 \
+    USE_PCRE2_JIT=1 \
+    USE_PROMEX=1 \
     USE_OPENSSL=1 \
     SSL_INC=/app/openssl/include \
     SSL_LIB=/app/openssl \
