@@ -8,13 +8,13 @@ RUN set -ex; \
     ca-certificates \
     git; \
     # Download & Build OpenSSL (sftcd:ECH-draft-13a)
-    git clone git@github.com:sftcd/openssl.git -b ECH-draft-13a --single-branch --depth=1; \
+    git clone https://github.com/sftcd/openssl.git -b ECH-draft-13a --single-branch --depth=1; \
     cd openssl; \
     ./config; \
     make -j $(nproc); \
     # Download & Build HAProxy (sftcd:ECH-experimental)
     cd /app; \
-    git clone git@github.com:sftcd/haproxy.git -b ECH-experimental --single-branch --depth=1; \
+    git clone https://github.com/sftcd/haproxy.git -b ECH-experimental --single-branch --depth=1; \
     cd haproxy; \
     make -j $(nproc) \
     TARGET=linux-musl \
