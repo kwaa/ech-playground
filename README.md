@@ -2,6 +2,14 @@
 
 Try using ECH (Encrypted Client Hello) for TLS-based proxies.
 
+## Status
+
+- [x] Binary valid
+- [x] Dockerfile vaild
+- [ ] Configure HAProxy
+- [ ] Configure Certbot
+- [ ] Publish Image `kwaabot/haproxy`
+
 ## HAProxy + NaiveProxy
 
 I compiled ECH-enabled OpenSSL and HAProxy as instructed in [esnistuff/haproxy.md](https://github.com/sftcd/openssl/blob/ECH-draft-13a/esnistuff/haproxy.md), and you can get the [x86_64 binaries](/haproxy/haproxy) and [Dockerfile](/haproxy/Dockerfile) from the `haproxy` folder of this repo.
