@@ -29,7 +29,16 @@ FROM alpine:edge
 
 WORKDIR /usr/bin
 
-RUN apk add --no-cache ca-certificates
+RUN apk add --no-cache \
+    ca-certificates \
+    # https://pkgs.alpinelinux.org/package/edge/main/x86/haproxy
+    busybox-binsh \
+    libcrypto3 \
+    libssl3 \
+    lua5.4-libs \
+    musl \
+    pcre \
+    zlib
 
 COPY --from=builder /app/haproxy/haproxy haproxy
 
