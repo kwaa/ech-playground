@@ -5,7 +5,7 @@ Try using ECH (Encrypted Client Hello) for TLS-based proxies.
 ## Status
 
 - [x] Binary valid
-- [x] Dockerfile vaild
+- [ ] Dockerfile vaild
 - [ ] Configure HAProxy
 - [ ] Configure Certbot
 - [ ] Publish Image `kwaabot/haproxy`
